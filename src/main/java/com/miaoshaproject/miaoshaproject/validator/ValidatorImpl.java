@@ -48,7 +48,7 @@ public class ValidatorImpl implements InitializingBean {
             validate.forEach(constraintViolation ->{
                     String errMsg = constraintViolation.getMessage();//获取错误信息
                     String propertyName = constraintViolation.getPropertyPath().toString(); // 获取知道是哪个字段错误了
-                   String put = result.getErrorMsgMap().put(propertyName, errMsg);//key 是名称 errmsg 错误信息
+                    result.getErrorMsgMap().put(propertyName, errMsg);//key 是名称 errmsg 错误信息
             });
         }
         return result;
